@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Caesar Cipher</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="main_window">
+			<h1 class="welcome_message">Let's Cipher!</h1>
+
+			<form>
+				<div class="input">
+					<input type="text" name="message" placeholder="Phrase">
+					<input type="text" name="number" placeholder="Number">
+				</div>
+
+				<div class="buttons">
+					<input type="submit" name="Cipher">
+					<button type="reset">Clear</button>
+					<button type="submit" formaction="http://localhost:4567">Reset</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="text">
+			<% if @message != "" %>
+				<p>Your message of "<%= @string %>" was shifted by <%= @number %>,</p>	
+				<p>So your coded message is "<%= @message %>."</p>
+			<% else %>
+				<p>
+					The Caesar Cipher is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C, and so on. The method is named after Julius Caesar, who apparently used it to communicate with his generals.<br><br>
+
+					Type a random word or phrase above and give me a number to shift that by, and I'll show you that phrase ran through a Caesar Cipher. 
+				</p>
+			<% end %>
+		</div>
+	</body>
+</html>

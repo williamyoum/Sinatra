@@ -1,0 +1,54 @@
+html {
+	height: 100%;
+	width: auto;
+	background-image: url(https://www.ancient.eu/uploads/images/574.jpg?v=1485682504);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+body {
+	background-color: rgba(255, 255, 255, 0.5);
+	display: grid;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	padding: 252px 50px;
+	font-weight: 100;
+	grid-auto-columns: 200px 1fr;
+	grid-auto-rows: 1fr 1fr;
+	grid-template-areas: 
+		"instructions welcome"
+		"instructions input"
+		"instructions buttons";
+	/* align-items: center; */
+	justify-items: center;
+}
+
+h1 {
+	color: gray;
+	font-weight: 200;
+}
+
+.main_window {
+	background-color: rgba(255, 255, 255, 0.6);
+	height: 200px;
+	margin-left: -200px;
+	border-radius: 5px 5px 15px 15px;
+	width: 317px;
+}
+
+.welcome_message {
+	grid-area: welcome;
+	/*color: blue;*/
+} 
+
+.input {
+	grid-area: input;
+}
+
+.buttons {
+	grid-area: buttons;
+}
+
+.text {
+	grid-area: instructions;
+}
